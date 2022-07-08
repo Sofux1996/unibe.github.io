@@ -1,0 +1,36 @@
+.d-block{
+  width: 1125px;
+  height: 426px;
+}
+.verde{
+  background-color: #87cc00;
+}
+.verde p{
+  color:  white;
+}
+.rojo{
+  background-color: #fd5308;
+}
+.rojo p{
+  color:  white;
+}
+.celeste{
+  background-color: #00adef;
+}
+.celeste p{
+  color:  white;
+}
+.card-img-top{
+  width: 1125px;
+  height: 426px;
+}
+.text-center{
+  margin-top: 50px;
+}
+.parent{
+  text-align : center;
+
+}
+.bt-color{
+  background-color: black;
+}

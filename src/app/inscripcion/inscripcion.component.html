@@ -1,0 +1,338 @@
+
+
+<div class="container-fluid">
+  <div class="py-5 text-center">
+    <h1 class="h3" style="color: #da8408;font-weight: bold;">FORMULARIO DE INSCRIPCION</h1>
+  </div>
+</div>
+
+<div class="container text-center">
+  <h2>Tu Foto</h2>
+
+  <img src="assets/img/1111.png" width="150" height="150" class="rounded-circle" alt="Cinque Terre"> <br>
+  <input type="file" name="adjunto" accept=".png">
+
+</div>
+
+<ul class="nav nav-tabs nav justify-content-center" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#home">Datos Personales</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu1">Representante Legal</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu2">Datos Inscripción</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu3">Historia Académica</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu4">Documentación</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu5">Nivelación</a>
+  </li>
+</ul>
+
+
+<div class="tab-content space">
+  <div id="home" class="container tab-pane active"><br>
+
+    <div class="form-group row ">
+      <label for="tidentificacion" class="col-12 col-lg-3 col-form-label text-left ">
+        Tipo Identificación:
+      </label>
+      <div class="col-12 col-lg-3">
+        <select name="tidentificacion" class="form-control" id="tidentificacion" alt="tipo identificacion"
+                [(ngModel)]="student.tipodeidentificacion">
+          <option value="0"> Seleccione una opción</option>
+          <option value="1"> Cédula</option>
+          <option value="2"> Pasaporte</option>
+        </select>
+      </div>
+
+      <label for="documento" class="col-12 col-lg-3 col-form-label text-left">
+        № de Identificación:
+      </label>
+      <div class="col-12 col-lg-3">
+        <input type="text" class="form-control" id="documento" name="documento" required="required"
+               [(ngModel)]="student.id">
+      </div>
+    </div>
+
+
+    <div class="form-group row space">
+      <label for="apellidos" class="col-12 col-lg-3 col-form-label text-left">
+        Apellidos:
+      </label>
+      <div class="col-12 col-lg-3">
+        <input type="text" id="apellidos" name="apellidos" class="form-control" minlength="5" maxlength="40" required pattern="[ A-Za-z]+" >
+      </div>
+
+      <label for="documento" class="col-12 col-lg-3 col-form-label text-left">
+        Nombres:
+      </label>
+      <div class="col-12 col-lg-3">
+        <input type="text" id="nombres" name="nombres" class="form-control" required="required"
+               [(ngModel)]="student.name">
+      </div>
+    </div>
+
+    <div class="form-group row space">
+      <label for="fecha_nacimiento" class="col-13 col-lg-3 col-form-label text-left">
+        Fecha Nacimiento:
+      </label>
+      <div class="col-6 col-lg-3">
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" required="required" [(ngModel)]="student.birthdate">
+      </div>
+
+      <label for="documento" class="col-12 col-lg-3 col-form-label text-left">
+        Estado Civil:
+      </label>
+      <div class="col-12 col-lg-3">
+        <select name="estado_civil" id="estado_civil" class="form-control" [(ngModel)]="student.estadocivil">
+          <option value="0"> -</option>
+          <option value="1">UNIÓN LIBRE</option>
+          <option value="2">CASADO/A</option>
+          <option value="3">VIUDO/A</option>
+          <option value="4">DIVORCIADO/A</option>
+          <option value="5">SOLTERO/A</option>
+          <option value="6">OTRO</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form-group row space">
+      <label for="genero" class="col-12 col-lg-3 col-form-label text-left">
+        Género:
+      </label>
+      <div class="col-12 col-lg-3">
+        <select name="genero" id="genero" class="form-control" [(ngModel)]="student.sector">
+          <option value="0">-</option>
+          <option value="1">Masculino</option>
+          <option value="2">Femenino</option>
+        </select>
+      </div>
+
+      <label for="nacionalidad" class="col-12 col-lg-3 col-form-label text-left">
+        Identificación étnica:
+      </label>
+      <div class="col-12 col-lg-3">
+        <select name="etnia" id="etnia" class="form-control" [(ngModel)]="student.identificacionEtnica">
+          <option value="0">-</option>
+          <option value="1">Negro/a</option>
+          <option value="2">Montubio/a</option>
+          <option value="3">Blanco/a</option>
+          <option value="4">Mestizo/a</option>
+          <option value="5">Afroecuatoriano</option>
+          <option value="6">Mulato/a</option>
+          <option value="7">Quichwa</option>
+          <option value="8">Shiwiar</option>
+          <option value="9">Shuar</option>
+          <option value="10">Tsáchila</option>
+          <option value="11">Otro</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row space">
+
+      <label for="sector" class="col-12 col-lg-3 col-form-label text-left">
+        Sector:
+      </label>
+      <div class="col-12 col-lg-3">
+        <input type="text" id="sector" name="sector" class="form-control" required="required" >
+      </div>
+      <label for="direccion" class="col-12 col-lg-3 col-form-label text-left">
+        Dirección:
+      </label>
+      <div class="col-12 col-lg-3">
+        <input type="text" id="direccion" name="direccion" class="form-control" required="required" [(ngModel)]="student.address">
+      </div>
+    </div>
+    <div class="form-group row space">
+
+
+      <label for="documento" class="col-12 col-lg-3 col-form-label text-left">
+        Correo Electrónico:
+      </label>
+      <div class="col-12 col-lg-3">
+        <input type="email" id="email" name="email" class="form-control" required="required" [(ngModel)]="student.email">
+      </div>
+      <label for="celular" class="col-12 col-lg-3 col-form-label text-left">
+        Celular:
+      </label>
+      <div class="col-12 col-lg-3">
+        <input type="celular" id="celular" name="celular" class="form-control" required="required" [(ngModel)]="student.phonenumber">
+      </div>
+    </div>
+
+    <a href="#demo" class="btn btn-primary space" data-toggle="collapse">Trabajan</a>
+    <div id="demo" class="collapse">
+
+      <div class="form-group row space">
+        <label for="cargo" class="col-12 col-lg-3 col-form-label text-left ">
+          Cargo o puesto:
+        </label>
+        <div class="col-12 col-lg-3">
+          <input type="text" id="cargo" name="cargo" class="form-control" required="required" [(ngModel)]="student.cargo">
+
+        </div>
+
+        <label for="lugar" class="col-12 col-lg-3 col-form-label text-left">
+          Lugar del puesto:
+        </label>
+        <div class="col-12 col-lg-3">
+          <input type="text" id="lugar" name="lugar" class="form-control" required="required" [(ngModel)]="student.sector">
+        </div>
+      </div>
+    </div>
+    <div class="py-5 text-right">
+      <button mat-raised-button  (click)="save()">Guardar</button>
+    </div>
+
+  </div>
+
+
+
+  <div id="menu1" class="container tab-pane fade space">
+    <div class="card-body contenido">
+      <div class="form-group row space">
+        <label for="apellidos" class="col-12 col-lg-3 col-form-label text-left">
+          Apellidos:
+        </label>
+        <div class="col-12 col-lg-3">
+          <input type="text" id="apellidos" name="apellidos" class="form-control" required="required">
+        </div>
+
+        <label for="documento" class="col-12 col-lg-3 col-form-label text-left">
+          Nombres:
+        </label>
+        <div class="col-12 col-lg-3">
+          <input type="text" id="nombres" name="nombres" class="form-control" required="required" >
+        </div>
+      </div>
+      <div class="form-group row space">
+        <label for="email" class="col-12 col-lg-3 col-form-label text-left">
+          Correo Electrónico:
+        </label>
+        <div class="col-12 col-lg-3">
+          <input type="email" id="email" name="email" class="form-control" required="required" >
+        </div>
+        <label for="telefono" class="col-12 col-lg-3 col-form-label text-left">
+          Telefóno:
+        </label>
+        <div class="col-12 col-lg-3">
+          <input type="text" id="telefono" name="telefono" class="form-control" required="required" >
+        </div>
+
+      </div>
+    </div>
+    <div class="py-5 text-right">
+      <button mat-raised-button  (click)="save()">Guardar</button>
+    </div>
+  </div>
+  <div id="menu2" class="container tab-pane fade"><br>
+
+    <div class="card-body contenido">
+      <div class="form-group row space">
+        <label for="nacionalidad" class="col-12 col-lg-3 col-form-label text-left">
+          Carrera de Interés:
+        </label>
+        <div class="col-12 col-lg-9 ">
+          <select name="carrera" id="carrera" class="form-control">
+            <option value="0">-</option>
+            <option value="1">Contabilidad y Auditoría</option>
+            <option value="2">Derecho</option>
+            <option value="4">Economía</option>
+            <option value="5">Ingeniería de Software</option>
+            <option value="6">Licenciatura en Administración de Empresas</option>
+            <option value="7">Licenciatura en Enfermería</option>
+            <option value="8">Licenciatura en Gastronomía</option>
+            <option value="9">Licenciatura en Hospitalidad y Hotelería</option>
+            <option value="10">Licenciatura en Nutrición y Dietética</option>
+            <option value="11">Licenciatura en Turismo</option>
+            <option value="12">Licenciatura en Producción para Medios de Comunicación</option>
+          </select>
+        </div>
+      </div>
+      <div class="card-body contenido space">
+        <mat-checkbox color="primary">Aplica Beca</mat-checkbox>
+
+      </div>
+    </div>
+    <div class="py-5 text-right">
+      <button mat-raised-button  (click)="save()">Guardar</button>
+    </div>
+  </div>
+  <div id="menu3" class="container tab-pane fade"><br>
+    <div class="card-body contenido">
+      <div class="form-group row space">
+        <label for="apellidos" class="col-12 col-lg-3 col-form-label text-left">
+          Especialidad de Bachillerato:
+        </label>
+        <div class="col-12 col-lg-3">
+          <input type="text" id="apellidos" name="apellidos" class="form-control" required="required" >
+        </div>
+        <label for="apellidos" class="col-12 col-lg-3 col-form-label text-left">
+          Año de Graduación:
+        </label>
+
+        <div class="col-12 col-lg-3">
+          <input type="text" id="año" name="año" class="form-control" required="required" >
+        </div>
+      </div>
+      <div class="form-group row space">
+        <label for="lugar" class="col-12 col-lg-3 col-form-label text-left">
+          Institución Educativa:
+        </label>
+
+        <div class="col-12 col-lg-9">
+          <input type="text" id="lugar" name="lugar" class="form-control" required="required" >
+        </div>
+      </div>
+    </div>
+    <div class="py-5 text-right">
+      <button mat-raised-button  (click)="save()">Guardar</button>
+    </div>
+  </div>
+  <div id="menu4" class="container tab-pane fade space">
+    <div class="card-body contenido">
+
+      <p><b>Copia de Cédula:</b> </p>
+      <div class="custom-file mb-3 space">
+        <input type="file" class="custom-file-input" id="customFile" name="filename" accept=".pdf">
+
+      </div>
+      <div class="space">
+        <p><b>Copia de Votación:</b></p>
+        <div class="custom-file mb-3 space">
+          <input type="file" class="custom-file-input" id="customFile" name="filename" accept=".pdf">
+        </div>
+      </div>
+      <div class="space">
+        <p><b>Comprobante de Pago:</b></p>
+        <div class="custom-file mb-3 space">
+          <input type="file" class="custom-file-input" id="customFile" name="filename" accept=".pdf">
+        </div>
+      </div>
+
+    </div>
+    <div class="py-5 text-right">
+      <button mat-raised-button  (click)="save()">Guardar</button>
+    </div>
+  </div>
+  <div id="menu5" class="container tab-pane fade"><br>
+
+    <div class="col-sm-6 offset-sm-3 col-md-4 offset-md-4 col-lg-2 offset-lg-5 my-2">
+      <button type="button" class="btn btn-primary form-control" title="Registrar">
+        <i class="fa fa-save mr-1" aria-label="Registrar"></i>
+        Registrar
+      </button>
+  </div>
+  </div>
+
+</div>
+
+<div class="container-fin"></div>
